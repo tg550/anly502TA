@@ -17,3 +17,4 @@ FIELDS TERMINATED BY ','
 select * FROM hive_bigrams
 where first_yr == 1950 AND ct == 60
 ORDER BY book_average DESC, bigram
+LIMIT 10;
