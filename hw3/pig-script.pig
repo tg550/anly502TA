@@ -1,8 +1,8 @@
 
 -- use single file for development
-ad = LOAD 's3://bigdatateaching/bigrams/googlebooks-eng-us-all-2gram-20120701-i' AS (bigram:chararray, year:int, count:int, books:int);
+ad = LOAD 's3://bigdatateaching/bigrams/googlebooks-eng-us-all-2gram-20120701-iz' AS (bigram:chararray, year:int, count:int, books:int);
 -- use wildcard to select all "i" files
-ad = LOAD 's3://bigdatateaching/bigrams/googlebooks-eng-us-all-2gram-20120701-i?' AS (bigram:chararray, year:int, count:int, books:int);
+-- ad = LOAD 's3://bigdatateaching/bigrams/googlebooks-eng-us-all-2gram-20120701-i?' AS (bigram:chararray, year:int, count:int, books:int);
 
 gb = GROUP ad BY bigram;
 agb = FOREACH gb GENERATE 
